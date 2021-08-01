@@ -3,7 +3,7 @@ service: notes-api
 stage: prod
 region: ap-southeast-2
 stack: notes-api-prod
-resources: 32
+resources: 38
 api keys:
   None
 endpoints:
@@ -12,11 +12,13 @@ endpoints:
   GET - https://9dzhlosui0.execute-api.ap-southeast-2.amazonaws.com/prod/notes
   PUT - https://9dzhlosui0.execute-api.ap-southeast-2.amazonaws.com/prod/notes/{id}
   DELETE - https://9dzhlosui0.execute-api.ap-southeast-2.amazonaws.com/prod/notes/{id}
+  POST - https://9dzhlosui0.execute-api.ap-southeast-2.amazonaws.com/prod/billing
 functions:
   create: notes-api-prod-create
   get: notes-api-prod-get
   list: notes-api-prod-list
   update: notes-api-prod-update
   delete: notes-api-prod-delete
+  billing: notes-api-prod-billing
 layers:
   None
